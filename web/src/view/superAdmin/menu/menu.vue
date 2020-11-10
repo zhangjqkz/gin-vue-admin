@@ -181,7 +181,7 @@ import {
   deleteBaseMenu,
   getBaseMenuById
 } from "@/api/menu";
-import infoList from "@/components/mixins/infoList";
+import infoList from "@/mixins/infoList";
 import icon from "@/view/superAdmin/menu/icon";
 export default {
   name: "Menus",
@@ -232,7 +232,7 @@ export default {
   methods: {
     addParameter(form) {
       if (!form.parameters){
-        form.parameters = []
+        this.$set(form,"parameters",[])
       }
       form.parameters.push({
         type: "query",
